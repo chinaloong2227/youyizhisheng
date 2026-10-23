@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140" role="img" aria-label="Голос Дружбы 友谊之声">
   <!-- 基础图形（太极 S 分割 + 声波点眼），缩放置于左侧 -->
   <g transform="translate(8,11) scale(0.58)">
+    <!-- 微涟漪（传播意象，与 logo-mark.svg 母版一致） -->
+    <circle cx="100" cy="100" r="110" fill="none" stroke="#C9A227" stroke-width="4" stroke-dasharray="3 18" opacity="0.45"/>
     <circle cx="100" cy="100" r="92" fill="#1B3A6B"/>
     <path d="M100,8 a92,92 0 0 1 0,184 a46,46 0 0 1 0,-92 a46,46 0 0 0 0,-92 z" fill="#C9A227"/>
     <path d="M100,8 a46,46 0 0 0 0,92 a46,46 0 0 1 0,92" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
