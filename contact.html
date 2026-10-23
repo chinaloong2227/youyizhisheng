@@ -29,19 +29,21 @@
 
       <!-- 已接入 Formspree：把下面的 YOUR_FORM_ID 换成你在 formspree.io 注册得到的真实 ID 即可收件 -->
       <form class="contact-form" style="max-width:480px; margin-top:2rem"
-            action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            action="https://formspree.io/f/xrppbzzw" method="POST">
         <input type="hidden" name="_subject" value="友谊之声 · 新的咨询">
+        <!-- 部署后把下面 _next 的占位域名换成你的真实站点地址，提交后会在站内感谢页停留 -->
+        <input type="hidden" name="_next" value="https://YOUR-USERNAME.github.io/YOUR-REPO/thanks.html">
         <div class="field">
           <label for="name" data-i18n="field_name">称呼</label>
-          <input id="name" name="name" type="text" data-i18n-ph="field_name_ph" placeholder="怎么称呼您" />
+          <input id="name" name="name" type="text" data-i18n-ph="field_name_ph" placeholder="怎么称呼您" required />
         </div>
         <div class="field">
           <label for="email" data-i18n="field_email">邮箱</label>
-          <input id="email" name="email" type="email" placeholder="name@example.com" />
+          <input id="email" name="email" type="email" placeholder="name@example.com" required />
         </div>
         <div class="field">
           <label for="msg" data-i18n="field_msg">想说的话</label>
-          <textarea id="msg" name="message" rows="5" data-i18n-ph="field_msg_ph" placeholder="简单说一下您的跨境需求（投资 / 贸易 / 合规）"></textarea>
+          <textarea id="msg" name="message" rows="5" data-i18n-ph="field_msg_ph" placeholder="简单说一下您的跨境需求（投资 / 贸易 / 合规）" required></textarea>
         </div>
         <button type="submit" class="btn" data-i18n="btn_send">发送</button>
       </form>
