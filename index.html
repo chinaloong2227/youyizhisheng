@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title_home">友谊之声 · 商务咨询</title>
+  <!-- description 会影响搜索引擎展示，可继续润色 -->
+  <meta name="description" content="友谊之声有限公司商务咨询服务板块，专注中俄企业双边投资与经贸的配套支持。" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/brand/logo-mark.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!-- ===== 顶部导航：每个页面保持一致，方便访客随时跳转 ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><img class="brand-mark" src="assets/brand/logo-mark.svg" alt="友谊之声"><span data-i18n="brand">友谊之声</span></a>
+      <button class="nav-toggle" aria-label="菜单" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page" data-i18n="nav_home">首页</a></li>
+        <li><a href="about.html" data-i18n="nav_about">关于</a></li>
+        <li><a href="services.html" data-i18n="nav_services">服务</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">联系</a></li>
+        <!-- 语言切换按钮：点一下在中/俄之间切换，状态会被记住 -->
+        <li><button id="lang-toggle" class="lang-toggle" type="button" data-i18n="nav_lang">РУС</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== 英雄区：第一屏，说清你是谁、做什么 ===== -->
+    <section class="hero container">
+      <h1 data-i18n="hero_title">连接中俄，让跨境合作更稳妥。</h1>
+      <p data-i18n="hero_sub">友谊之声有限公司 · 商务咨询服务。专注中俄企业双边投资与经贸的配套支持——从投资落地、贸易对接到合规运营，一站式帮您少走弯路。</p>
+      <div>
+        <a href="services.html" class="btn" data-i18n="btn_services">了解服务</a>
+        <a href="contact.html" class="btn btn--ghost" data-i18n="btn_contact">联系我们</a>
+      </div>
+    </section>
+
+    <!-- ===== 价值区块：三句话讲清核心服务 ===== -->
+    <section class="section section--soft">
+      <div class="container">
+        <h2 data-i18n="sec_offer_title">我们提供什么</h2>
+        <p class="lead" data-i18n="sec_offer_lead">围绕中俄双边投资与经贸，提供落地全流程的配套服务。</p>
+        <div class="grid-3" style="margin-top:2rem">
+          <!-- 下面每个 .card 就是一格，复制即可新增 -->
+          <div class="card">
+            <h3 data-i18n="card1_title">投资落地咨询</h3>
+            <p data-i18n="card1_desc">为中方赴俄、俄方来华企业提供投资架构、准入与落地全流程咨询。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="card2_title">经贸撮合对接</h3>
+            <p data-i18n="card2_desc">匹配中俄双边供需，撮合贸易与项目合作，降低信息不对称。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="card3_title">合规与配套</h3>
+            <p data-i18n="card3_desc">跨境法务、税务、结算与本地化运营的一站式配套支持。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 页脚：保持简洁，别堆东西 ===== -->
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> <span data-i18n="footer_text">友谊之声有限公司 · 用 WorkBuddy 搭建</span></div>
+  </footer>
+
+  <!-- 脚本放在 body 末尾：i18n 先加载（负责翻译与切换），main 后加载（汉堡菜单+年份） -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

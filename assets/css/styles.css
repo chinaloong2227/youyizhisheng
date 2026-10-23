@@ -1,0 +1,223 @@
+/* ============================================================
+   友谊之声 · 商务咨询 — 全局样式
+   设计原则：大量留白、单一强调色、清晰的信息层级
+   学习方式：先改 :root 里的变量，看整站风格怎么变
+   ============================================================ */
+
+/* ---- 设计变量：改这里就能换主题 ---- */
+:root {
+  --bg: #ffffff;          /* 页面背景 */
+  --bg-soft: #f5f5f3;     /* 浅色区块背景 */
+  --text: #1a1a1a;        /* 主文字 */
+  --muted: #6b6b6b;       /* 次要文字 */
+  --line: #e4e4e1;        /* 分割线/边框 */
+  --accent: #1a1a1a;      /* 强调色（这里走极简黑白） */
+  --max-width: 1080px;    /* 内容最大宽度 */
+  --space: clamp(1.5rem, 5vw, 4rem); /* 左右内边距，随屏幕自适应 */
+}
+
+/* ---- 基础重置：让不同浏览器表现一致 ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ---- 布局容器：统一内容宽度与居中 ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space);
+}
+
+/* ---- 顶部导航：吸顶 + 毛玻璃 ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+}
+.brand-mark { height: 26px; width: 26px; display: block; }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  transition: color .2s ease;
+}
+.nav-links a:hover,
+.nav-links a[aria-current="page"] { color: var(--text); }
+.nav-toggle {
+  display: none;            /* 默认隐藏，窄屏才显示 */
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text);
+}
+
+/* 语言切换按钮：外观与导航链接保持一致 */
+.lang-toggle {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 0;
+  letter-spacing: 0.02em;
+}
+.lang-toggle:hover { color: var(--text); }
+
+/* ---- 英雄区：第一屏，决定访客去留 ---- */
+.hero { padding-block: clamp(4rem, 12vw, 9rem); }
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.2rem;
+  max-width: 16ch;
+}
+.hero p {
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  color: var(--muted);
+  max-width: 46ch;
+  margin: 0 0 2rem;
+}
+
+/* ---- 按钮：统一圆角胶囊样式 ---- */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid var(--text);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: background .2s ease, color .2s ease;
+}
+.btn:hover { background: var(--text); color: var(--bg); }
+.btn--ghost { border-color: var(--line); color: var(--text); }
+.btn--ghost:hover { background: var(--bg-soft); color: var(--text); }
+
+/* ---- 通用区块 ---- */
+.section { padding-block: clamp(3rem, 8vw, 6rem); }
+.section--soft { background: var(--bg-soft); }
+.section h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 2rem;
+}
+.lead { color: var(--muted); max-width: 52ch; }
+
+/* ---- 三栏卡片（首页价值展示）---- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem;
+  background: var(--bg);
+}
+.card h3 { margin: 0 0 0.5rem; font-size: 1.15rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+/* ---- 作品网格 ---- */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.work {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.work .thumb {
+  aspect-ratio: 4 / 3;
+  background: var(--bg-soft);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.work .meta { padding: 1rem 1.2rem 1.4rem; }
+.work .meta h3 { margin: 0 0 0.3rem; font-size: 1.1rem; }
+.work .meta p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+/* ---- 表单（联系页）---- */
+.field { margin-bottom: 1.2rem; }
+.field label { display: block; margin-bottom: 0.4rem; font-size: 0.9rem; }
+.field input, .field textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+}
+.field input:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--text);
+}
+
+/* ---- 页脚 ---- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---- 响应式：窄屏（手机）显示汉堡菜单 ---- */
+@media (max-width: 640px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem var(--space) 1rem;
+    display: none;            /* 默认收起 */
+  }
+  .nav-links.open { display: flex; }  /* JS 加 .open 才展开 */
+  .nav-links li { padding: 0.7rem 0; border-bottom: 1px solid var(--line); }
+}

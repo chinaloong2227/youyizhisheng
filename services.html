@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title_services">服务 · 友谊之声</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/brand/logo-mark.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><img class="brand-mark" src="assets/brand/logo-mark.svg" alt="友谊之声"><span data-i18n="brand">友谊之声</span></a>
+      <button class="nav-toggle" aria-label="菜单" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+        <li><a href="about.html" data-i18n="nav_about">关于</a></li>
+        <li><a href="services.html" aria-current="page" data-i18n="nav_services">服务</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">联系</a></li>
+        <li><button id="lang-toggle" class="lang-toggle" type="button" data-i18n="nav_lang">РУС</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h2 data-i18n="services_title">我们的服务</h2>
+      <p class="lead" data-i18n="services_lead">从中俄双边投资到经贸落地，覆盖跨境合作的关键环节。</p>
+      <div class="grid-3" style="margin-top:2rem">
+        <!-- 复制下面整个 .card 块，即可新增一项服务 -->
+        <div class="card">
+          <h3 data-i18n="s1_title">投资架构设计</h3>
+          <p data-i18n="s1_desc">设计合规、节税、可落地的跨境投资持股与交易结构。</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="s2_title">市场准入咨询</h3>
+          <p data-i18n="s2_desc">针对行业准入、资质与监管要求，提供中俄双向准入路径。</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="s3_title">经贸撮合对接</h3>
+          <p data-i18n="s3_desc">基于真实供需，为中俄买卖双方与项目方牵线搭桥。</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="s4_title">跨境法务合规</h3>
+          <p data-i18n="s4_desc">合同、公司设立、劳动与数据合规等法律风险把控。</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="s5_title">结算与税务</h3>
+          <p data-i18n="s5_desc">跨境收付款、汇率与税务申报的实操支持。</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="s6_title">本地化运营</h3>
+          <p data-i18n="s6_desc">语言、团队、供应链与本地资源对接的落地陪跑。</p>
+        </div>
+      </div>
+
+      <p style="margin-top:2.5rem">
+        <span data-i18n="services_cta_text">想了解哪项服务更适合您？</span><a href="contact.html" class="btn btn--ghost" data-i18n="services_cta_btn">直接咨询</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> <span data-i18n="footer_text">友谊之声有限公司 · 用 WorkBuddy 搭建</span></div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

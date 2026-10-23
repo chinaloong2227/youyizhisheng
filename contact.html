@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title_contact">联系 · 友谊之声</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/brand/logo-mark.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><img class="brand-mark" src="assets/brand/logo-mark.svg" alt="友谊之声"><span data-i18n="brand">友谊之声</span></a>
+      <button class="nav-toggle" aria-label="菜单" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav_home">首页</a></li>
+        <li><a href="about.html" data-i18n="nav_about">关于</a></li>
+        <li><a href="services.html" data-i18n="nav_services">服务</a></li>
+        <li><a href="contact.html" aria-current="page" data-i18n="nav_contact">联系</a></li>
+        <li><button id="lang-toggle" class="lang-toggle" type="button" data-i18n="nav_lang">РУС</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h2 data-i18n="contact_title">联系我们</h2>
+      <p class="lead" data-i18n="contact_lead">无论是中方出海还是俄方来华，欢迎聊聊你的跨境需求。表单需接入后端（如 Formspree）才能真正收件。</p>
+
+      <!-- 已接入 Formspree：把下面的 YOUR_FORM_ID 换成你在 formspree.io 注册得到的真实 ID 即可收件 -->
+      <form class="contact-form" style="max-width:480px; margin-top:2rem"
+            action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="友谊之声 · 新的咨询">
+        <div class="field">
+          <label for="name" data-i18n="field_name">称呼</label>
+          <input id="name" name="name" type="text" data-i18n-ph="field_name_ph" placeholder="怎么称呼您" />
+        </div>
+        <div class="field">
+          <label for="email" data-i18n="field_email">邮箱</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" />
+        </div>
+        <div class="field">
+          <label for="msg" data-i18n="field_msg">想说的话</label>
+          <textarea id="msg" name="message" rows="5" data-i18n-ph="field_msg_ph" placeholder="简单说一下您的跨境需求（投资 / 贸易 / 合规）"></textarea>
+        </div>
+        <button type="submit" class="btn" data-i18n="btn_send">发送</button>
+      </form>
+
+      <p style="margin-top:1.5rem">
+        <span data-i18n="contact_email_hint">或直接发邮件：</span><a href="mailto:chinaloong@gmail.com">chinaloong@gmail.com</a> <span data-i18n="contact_email_note">（邮箱已设为 chinaloong@gmail.com，如需更换请改 contact.html 中的 mailto）</span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> <span data-i18n="footer_text">友谊之声有限公司 · 用 WorkBuddy 搭建</span></div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

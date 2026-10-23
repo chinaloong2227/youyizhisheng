@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" role="img" aria-label="友谊之声 Голос Дружбы">
+  <!-- 基础图形（太极 S 分割 + 声波点眼），缩放置于左侧 -->
+  <g transform="translate(8,11) scale(0.58)">
+    <circle cx="100" cy="100" r="92" fill="#1B3A6B"/>
+    <path d="M100,8 a92,92 0 0 1 0,184 a46,46 0 0 1 0,-92 a46,46 0 0 0 0,-92 z" fill="#C9A227"/>
+    <path d="M100,8 a46,46 0 0 0 0,92 a46,46 0 0 1 0,92" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    <g transform="translate(100,54)">
+      <circle r="6" fill="#1B3A6B"/>
+      <circle r="12" fill="none" stroke="#1B3A6B" stroke-width="2"/>
+      <circle r="18" fill="none" stroke="#1B3A6B" stroke-width="1.5" opacity="0.55"/>
+    </g>
+    <g transform="translate(100,146)">
+      <circle r="6" fill="#C9A227"/>
+      <circle r="12" fill="none" stroke="#C9A227" stroke-width="2"/>
+      <circle r="18" fill="none" stroke="#C9A227" stroke-width="1.5" opacity="0.55"/>
+    </g>
+  </g>
+  <!-- 中文主名 -->
+  <text x="138" y="80" font-family="'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif" font-size="44" font-weight="700" fill="#1B3A6B">友谊之声</text>
+  <!-- 俄文副名（金色，呼应双语） -->
+  <text x="140" y="110" font-family="'Noto Sans','Segoe UI',sans-serif" font-size="18" font-weight="600" fill="#C9A227" letter-spacing="0.5">Голос Дружбы</text>
+</svg>
