@@ -41,6 +41,7 @@
   <main>
     <!-- ===== 英雄区：第一屏，说清你是谁、做什么 ===== -->
     <section class="hero container">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
       <h1 data-i18n="hero_title">连接中俄，让跨境合作更稳妥。</h1>
       <p data-i18n="hero_sub">友谊之声有限公司 · 商务咨询服务。专注中俄企业双边投资与经贸的配套支持——从投资落地、贸易对接到合规运营，一站式帮您少走弯路。</p>
       <div>
@@ -81,5 +82,6 @@
   <!-- 脚本放在 body 末尾：i18n 先加载（负责翻译与切换），main 后加载（汉堡菜单+年份） -->
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/hero-canvas.js"></script>
 </body>
 </html>
