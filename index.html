@@ -39,7 +39,7 @@
   </header>
 
   <main>
-    <!-- ===== 英雄区：第一屏，说清你是谁、做什么 ===== -->
+    <!-- ===== 英雄区：视频背景 + 一句话定位 ===== -->
     <section class="hero container">
       <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
         <source src="assets/media/hero-bg.mp4" type="video/mp4" />
@@ -48,31 +48,175 @@
       <h1 data-i18n="hero_title">连接中俄，让跨境合作更稳妥。</h1>
       <p data-i18n="hero_sub">友谊之声有限公司 · 商务咨询服务。专注中俄企业双边投资与经贸的配套支持——从投资落地、贸易对接到合规运营，一站式帮您少走弯路。</p>
       <div>
-        <a href="services.html" class="btn" data-i18n="btn_services">了解服务</a>
+        <a href="services.html" class="btn btn--primary" data-i18n="btn_services">了解服务</a>
         <a href="contact.html" class="btn btn--ghost" data-i18n="btn_contact">联系我们</a>
       </div>
     </section>
 
-    <!-- ===== 价值区块：三句话讲清核心服务 ===== -->
+    <!-- ===== 1) 双向业务：我们支持谁 ===== -->
     <section class="section section--soft">
       <div class="container">
-        <h2 data-i18n="sec_offer_title">我们提供什么</h2>
-        <p class="lead" data-i18n="sec_offer_lead">围绕中俄双边投资与经贸，提供落地全流程的配套服务。</p>
-        <div class="grid-3" style="margin-top:2rem">
-          <!-- 下面每个 .card 就是一格，复制即可新增 -->
+        <h2 data-i18n="sec_support_title">我们支持中俄双向业务</h2>
+        <p class="lead" data-i18n="sec_support_lead">无论中方出海还是俄方来华，都能在这里找到落地的第一步。</p>
+        <div class="grid-2" style="margin-top:2rem">
           <div class="card">
-            <h3 data-i18n="card1_title">投资落地咨询</h3>
-            <p data-i18n="card1_desc">为中方赴俄、俄方来华企业提供投资架构、准入与落地全流程咨询。</p>
+            <h3 data-i18n="support_cn_title">中方赴俄</h3>
+            <p data-i18n="support_cn_desc">为赴俄投资、设厂、贸易的中方企业提供准入、架构与本地资源的落地支持。</p>
           </div>
           <div class="card">
-            <h3 data-i18n="card2_title">经贸撮合对接</h3>
-            <p data-i18n="card2_desc">匹配中俄双边供需，撮合贸易与项目合作，降低信息不对称。</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="card3_title">合规与配套</h3>
-            <p data-i18n="card3_desc">跨境法务、税务、结算与本地化运营的一站式配套支持。</p>
+            <h3 data-i18n="support_ru_title">俄方来华</h3>
+            <p data-i18n="support_ru_desc">为来华采购、参展、设点的俄方企业对接供应商、渠道与合规路径。</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== 2) 主要服务项目（6 项）===== -->
+    <section class="section">
+      <div class="container">
+        <h2 data-i18n="sec_services_title">主要服务项目</h2>
+        <p class="lead" data-i18n="sec_services_lead">从中俄双边投资到经贸落地，覆盖跨境合作的关键环节。</p>
+        <div class="grid-3" style="margin-top:2rem">
+          <div class="card">
+            <h3 data-i18n="s1_title">投资架构设计</h3>
+            <p data-i18n="s1_desc">设计合规、节税、可落地的跨境投资持股与交易结构。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="s2_title">市场准入咨询</h3>
+            <p data-i18n="s2_desc">针对行业准入、资质与监管要求，提供中俄双向准入路径。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="s3_title">经贸撮合对接</h3>
+            <p data-i18n="s3_desc">基于真实供需，为中俄买卖双方与项目方牵线搭桥。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="s4_title">跨境法务合规</h3>
+            <p data-i18n="s4_desc">合同、公司设立、劳动与数据合规等法律风险把控。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="s5_title">结算与税务</h3>
+            <p data-i18n="s5_desc">跨境收付款、汇率与税务申报的实操支持。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="s6_title">本地化运营</h3>
+            <p data-i18n="s6_desc">语言、团队、供应链与本地资源对接的落地陪跑。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3) 专注领域 ===== -->
+    <section class="section section--soft">
+      <div class="container">
+        <h2 data-i18n="sec_sectors_title">专注领域</h2>
+        <p class="lead" data-i18n="sec_sectors_lead">在以下领域积累了可落地的行业认知与合作资源。</p>
+        <ul class="chips" style="margin-top:2rem">
+          <li data-i18n="sector1">能源与资源</li>
+          <li data-i18n="sector2">农业与食品</li>
+          <li data-i18n="sector3">工业制造</li>
+          <li data-i18n="sector4">消费品与电商</li>
+          <li data-i18n="sector5">物流与供应链</li>
+          <li data-i18n="sector6">科技与创新</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 4) 典型合作场景（脱敏处理，不虚构客户）===== -->
+    <section class="section">
+      <div class="container">
+        <h2 data-i18n="sec_cases_title">典型合作场景</h2>
+        <p class="lead" data-i18n="sec_cases_lead">以下是我们常见的三类合作场景，客户信息已做脱敏处理。</p>
+        <div class="grid-3" style="margin-top:2rem">
+          <div class="card">
+            <h3 data-i18n="case1_title">赴俄设厂落地</h3>
+            <p data-i18n="case1_desc">协助中方制造企业完成俄罗斯公司注册、厂房选址与本地用工合规。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="case2_title">俄方采购对接</h3>
+            <p data-i18n="case2_desc">为俄方采购商匹配中国供应商，组织验厂、议价与合同条款落地。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="case3_title">跨境结算通道</h3>
+            <p data-i18n="case3_desc">设计合规的收付款与税务方案，打通中俄之间的资金通道。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5) 为什么信赖我们 ===== -->
+    <section class="section section--soft">
+      <div class="container">
+        <h2 data-i18n="sec_trust_title">为什么信赖我们</h2>
+        <div class="grid-2" style="margin-top:2rem">
+          <div class="card">
+            <h3 data-i18n="trust1_title">中俄双语直连</h3>
+            <p data-i18n="trust1_desc">中文、俄文直接沟通，避免因语言与信息差产生误判。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="trust2_title">落地实操优先</h3>
+            <p data-i18n="trust2_desc">只讲能执行的方案，重心放在注册、合规、渠道等实际环节。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="trust3_title">精简高效</h3>
+            <p data-i18n="trust3_desc">一人公司结构，沟通链路短、响应快，成本更可控。</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="trust4_title">信息透明</h3>
+            <p data-i18n="trust4_desc">流程、费用与风险前置说明，不做模糊承诺。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6) 最新动态 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 data-i18n="sec_news_title">最新动态</h2>
+        <ul class="news-list" style="margin-top:2rem">
+          <li>
+            <span class="news-date" data-i18n="news1_date">2026-10-26</span>
+            <span class="news-title" data-i18n="news1_title">友谊之声官网正式上线，中俄双语同步开放</span>
+          </li>
+          <li>
+            <span class="news-date" data-i18n="news2_date">2026-10-20</span>
+            <span class="news-title" data-i18n="news2_title">完成首批中俄双边经贸需求对接</span>
+          </li>
+          <li>
+            <span class="news-date" data-i18n="news3_date">2026-10-12</span>
+            <span class="news-title" data-i18n="news3_title">新增跨境结算与税务配套服务</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 7) 资源与伙伴网络 ===== -->
+    <section class="section section--soft">
+      <div class="container">
+        <h2 data-i18n="sec_network_title">资源与伙伴网络</h2>
+        <p class="lead" data-i18n="sec_network_lead">与一批可协作的专业机构保持合作，按需调用。</p>
+        <ul class="chips" style="margin-top:2rem">
+          <li data-i18n="net1">律师事务所</li>
+          <li data-i18n="net2">会计师事务所</li>
+          <li data-i18n="net3">物流与报关</li>
+          <li data-i18n="net4">银行与支付通道</li>
+          <li data-i18n="net5">本地招商与园区</li>
+          <li data-i18n="net6">翻译与本地化</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 8) 联系 CTA ===== -->
+    <section class="section section--cta">
+      <div class="container" style="text-align:center">
+        <h2 data-i18n="sec_cta_title">聊聊您的跨境需求</h2>
+        <p class="lead" data-i18n="sec_cta_lead" style="margin-inline:auto">无论是投资落地、贸易对接还是合规问题，欢迎直接联系——我们会先判断能不能帮，再谈怎么做。</p>
+        <div style="margin-top:1.5rem">
+          <a href="contact.html" class="btn btn--primary" data-i18n="btn_contact">联系我们</a>
+        </div>
+        <p style="margin-top:1rem; color:var(--muted)">
+          <span data-i18n="contact_email_hint">或直接发邮件：</span>
+          <a href="mailto:chinaloong@gmail.com" style="color:var(--accent)">chinaloong@gmail.com</a>
+        </p>
       </div>
     </section>
   </main>
