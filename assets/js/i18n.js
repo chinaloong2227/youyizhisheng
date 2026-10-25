@@ -62,7 +62,13 @@ const I18N = {
     btn_send: '发送',
     contact_email_hint: '或直接发邮件：',
     contact_email_note: '（邮箱已设为 chinaloong@gmail.com，如需更换请改 contact.html 中的 mailto）',
-    footer_text: '友谊之声有限公司 · 用 WorkBuddy 搭建'
+    footer_text: '友谊之声有限公司 · 用 WorkBuddy 搭建',
+    desc_home: '友谊之声有限公司商务咨询服务板块，专注中俄企业双边投资与经贸的配套支持。',
+    desc_about: '友谊之声是一家专注中俄双边投资与经贸配套服务的新生初创企业，提供投资落地、贸易撮合与合规运营的一站式支持。',
+    desc_services: '友谊之声提供中俄双向投资架构设计、市场准入、经贸撮合、法务合规、结算税务与本地化运营等跨境配套服务。',
+    desc_contact: '欢迎联系友谊之声，聊聊您的中俄跨境投资与经贸需求；表单提交后需求将直达我们的邮箱。',
+    desc_thanks: '感谢您联系友谊之声，我们已收到您的需求，将尽快与您回复。',
+    title_thanks: '感谢 · 友谊之声'
   },
 
   ru: {
@@ -119,7 +125,13 @@ const I18N = {
     btn_send: 'Отправить',
     contact_email_hint: 'Или напишите нам напрямую:',
     contact_email_note: '(Email: chinaloong@gmail.com. Для замены измените mailto в contact.html)',
-    footer_text: 'ООО «Голос Дружбы» · Создано с WorkBuddy'
+    footer_text: 'ООО «Голос Дружбы» · Создано с WorkBuddy',
+    desc_home: 'ООО «Голос Дружбы» — бизнес-консалтинг: сопровождение двусторонних инвестиций и торговли между Китаем и Россией.',
+    desc_about: '«Голос Дружбы» — новый стартап, специализирующийся на сопровождении двусторонних инвестиций и торговли между Китаем и Россией.',
+    desc_services: 'Услуги «Голос Дружбы»: инвестиционные структуры, доступ на рынок, торговое посредничество, комплаенс, расчёты и локализация для Китая и России.',
+    desc_contact: 'Свяжитесь с «Голос Дружбы», чтобы обсудить ваши трансграничные задачи. Запрос из формы придёт прямо на нашу почту.',
+    desc_thanks: 'Спасибо за обращение в «Голос Дружбы» — ваш запрос получен, мы скоро ответим.',
+    title_thanks: 'Спасибо · Голос Дружбы'
   }
 };
 
@@ -139,6 +151,13 @@ function applyLang(lang) {
     var k = el.getAttribute('data-i18n-ph');
     if (dict[k] != null) el.setAttribute('placeholder', dict[k]);
   });
+
+  // 页面描述：meta[name=description]，随语言切换，利于搜索引擎展示
+  var metaDesc = document.querySelector('meta[name="description"][data-i18n-meta]');
+  if (metaDesc) {
+    var mk = metaDesc.getAttribute('data-i18n-meta');
+    if (dict[mk] != null) metaDesc.setAttribute('content', dict[mk]);
+  }
 
   localStorage.setItem('lang', lang);
 }
